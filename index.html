@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Molly & Dogs</title>
+<style>
+body { margin:0; font-family: Arial, sans-serif; background:black; color:white; }
+header { padding:20px; text-align:center; background:#111; }
+nav a { margin:0 10px; color:white; text-decoration:none; }
+nav a:hover { color:#ffcc70; }
+section { padding:40px 20px; text-align:center; }
+.comic-card { display:inline-block; margin:15px; background:#222; padding:15px; border-radius:10px; width:200px; transition:0.3s; cursor:pointer; }
+.comic-card:hover { transform:scale(1.05); background:#333; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Molly & Dogs 🐶</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="comics.html">Comics</a>
+  </nav>
+</header>
+
+<section>
+  <h2>Featured Comics</h2>
+  <div class="comic-card" onclick="location.href='comics.html#morning-nap'">
+    <h3>Morning Nap</h3>
+    <p>Molly enjoys her cozy nap.</p>
+  </div>
+  <div class="comic-card" onclick="location.href='comics.html#snack-attack'">
+    <h3>Snack Attack</h3>
+    <p>Molly finds a treat and dances!</p>
+  </div>
+  <div class="comic-card" onclick="location.href='comics.html#afternoon-walk'">
+    <h3>Afternoon Walk</h3>
+    <p>Molly explores the outdoors.</p>
+  </div>
+</section>
+
+</body>
+</html>
