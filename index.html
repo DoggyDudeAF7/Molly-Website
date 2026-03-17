@@ -5,13 +5,90 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Molly & Dogs</title>
 <style>
-body { margin:0; font-family: Arial, sans-serif; background:black; color:white; }
-header { padding:20px; text-align:center; background:#111; }
-nav a { margin:0 10px; color:white; text-decoration:none; }
-nav a:hover { color:#ffcc70; }
-section { padding:40px 20px; text-align:center; }
-.comic-card { display:inline-block; margin:15px; background:#222; padding:15px; border-radius:10px; width:200px; transition:0.3s; cursor:pointer; }
-.comic-card:hover { transform:scale(1.05); background:#333; }
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fefcf5; /* soft cream background like Molly site */
+  color: #111;
+}
+a { text-decoration: none; color: #111; }
+a:hover { color: #ffcc70; }
+
+header {
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+header h1 { font-size: 2.5rem; margin: 0; }
+nav { margin-top: 10px; }
+nav a { margin: 0 15px; font-weight: bold; }
+
+/* Hero paw prints */
+.paw {
+  position: absolute;
+  width: 50px;
+  opacity: 0.2;
+  animation: float 6s ease-in-out infinite alternate;
+}
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg);}
+  50% { transform: translateY(-20px) rotate(15deg);}
+  100% { transform: translateY(0px) rotate(0deg);}
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* Cards for comics / breeds / daily life */
+.card {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  width: 220px;
+}
+.card:hover { transform: scale(1.05); }
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Section titles */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Daily life timeline */
+.timeline {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.timeline .card { width: 150px; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  margin-top: 50px;
+}
+footer p { margin: 0; font-size: 0.9rem; color: #555; }
+
 </style>
 </head>
 <body>
@@ -24,21 +101,60 @@ section { padding:40px 20px; text-align:center; }
   </nav>
 </header>
 
+<!-- Hero Paw Prints -->
+<img src="https://via.placeholder.com/50x50?text=🐾" class="paw" style="top:20px; left:30px;">
+<img src="https://via.placeholder.com/50x50?text=🐾" class="paw" style="top:60px; left:300px;">
+<img src="https://via.placeholder.com/50x50?text=🐾" class="paw" style="top:150px; left:600px;">
+
+<!-- About Molly Section -->
+<section>
+  <h2>About Molly</h2>
+  <p>Molly is a playful dog who loves naps, treats, walks, and cuddles! 🐾</p>
+  <div class="card"><img src="https://via.placeholder.com/200x150?text=Molly+1" alt="Molly"><p>Molly smiling</p></div>
+  <div class="card"><img src="https://via.placeholder.com/200x150?text=Molly+2" alt="Molly"><p>Molly relaxing</p></div>
+  <div class="card"><img src="https://via.placeholder.com/200x150?text=Molly+3" alt="Molly"><p>Molly walking</p></div>
+</section>
+
+<!-- Featured Comics -->
 <section>
   <h2>Featured Comics</h2>
-  <div class="comic-card" onclick="location.href='comics.html#morning-nap'">
+  <div class="card" onclick="location.href='comics.html#morning-nap'">
+    <img src="https://via.placeholder.com/200x150?text=Morning+Nap" alt="Morning Nap">
     <h3>Morning Nap</h3>
-    <p>Molly enjoys her cozy nap.</p>
   </div>
-  <div class="comic-card" onclick="location.href='comics.html#snack-attack'">
+  <div class="card" onclick="location.href='comics.html#snack-attack'">
+    <img src="https://via.placeholder.com/200x150?text=Snack+Attack" alt="Snack Attack">
     <h3>Snack Attack</h3>
-    <p>Molly finds a treat and dances!</p>
   </div>
-  <div class="comic-card" onclick="location.href='comics.html#afternoon-walk'">
+  <div class="card" onclick="location.href='comics.html#afternoon-walk'">
+    <img src="https://via.placeholder.com/200x150?text=Afternoon+Walk" alt="Afternoon Walk">
     <h3>Afternoon Walk</h3>
-    <p>Molly explores the outdoors.</p>
   </div>
 </section>
+
+<!-- Daily Life Timeline -->
+<section>
+  <h2>Molly's Daily Life</h2>
+  <div class="timeline">
+    <div class="card"><p>Morning Nap 💤</p></div>
+    <div class="card"><p>Snack Time 🍪</p></div>
+    <div class="card"><p>Afternoon Walk 🚶‍♀️</p></div>
+    <div class="card"><p>Evening Nap 💤</p></div>
+    <div class="card"><p>Cuddle Time ❤️</p></div>
+  </div>
+</section>
+
+<!-- Dog Breeds Section -->
+<section>
+  <h2>Dog Breeds</h2>
+  <div class="card"><img src="https://via.placeholder.com/200x150?text=Cavoodle"><p>Cavoodle</p></div>
+  <div class="card"><img src="https://via.placeholder.com/200x150?text=Shih+Tzu"><p>Shih Tzu</p></div>
+  <div class="card"><img src="https://via.placeholder.com/200x150?text=Golden+Retriever"><p>Golden Retriever</p></div>
+</section>
+
+<footer>
+  <p>© 2026 Molly & Dogs 🐾</p>
+</footer>
 
 </body>
 </html>
